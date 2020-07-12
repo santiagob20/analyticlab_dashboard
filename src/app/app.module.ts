@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { MapComponent } from './components/map/map.component';
 import { TableCommercesComponent } from './components/table-commerces/table-commerces.component';
 import { GraphComponent } from './components/graph/graph.component';
+import { Graph2Component } from './components/graph2/graph2.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { GraphComponent } from './components/graph/graph.component';
     NavbarComponent,
     MapComponent,
     TableCommercesComponent,
-    GraphComponent
+    GraphComponent,
+    Graph2Component
   ],
   imports: [
     BrowserModule,

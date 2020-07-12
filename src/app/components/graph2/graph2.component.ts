@@ -3,17 +3,16 @@ import Chart from 'chart.js';
 import { ServiceDatadashboardService } from '../../services/service-datadashboard.service';
 
 @Component({
-  selector: 'app-graph',
-  templateUrl: './graph.component.html',
-  styleUrls: ['./graph.component.scss']
+  selector: 'app-graph2',
+  templateUrl: './graph2.component.html',
+  styleUrls: ['./graph2.component.scss']
 })
-export class GraphComponent implements OnInit {
-
-  chartSales = [];
+export class Graph2Component implements OnInit {
+  chart2 = [];
   chartData: any = [[''], ['']];
   tmpres: any;
-  constructor(private chartService: ServiceDatadashboardService) { }
 
+  constructor(private chartService: ServiceDatadashboardService) { }
 
   ngOnInit() {
     this.renderGraph()
@@ -28,18 +27,18 @@ export class GraphComponent implements OnInit {
         let index = 0;
         this.tmpres.forEach(el => {
           this.chartData[0].push(el.name);
-          this.chartData[1].push(el.sales * this.getRandomInt(2, 15));
+          this.chartData[1].push((el.sales-1000000) * Math.random());
           index++;
         });
 
 
         // render chart
-        this.chartSales = new Chart('canvas', {
+        this.chart2 = new Chart('canvas2', {
           type: 'bar',
           data: {
             labels: this.chartData[0],
             datasets: [{
-              label: 'Ventas',
+              label: 'Pérdidas',
               data: this.chartData[1],
               backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -89,4 +88,5 @@ export class GraphComponent implements OnInit {
   getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
   }
+
 }
