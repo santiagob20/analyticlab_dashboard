@@ -3,4 +3,4 @@
 Dashboard creado con Angular version 7.0.2.
 
 ## Despliegue en producción en Firebase
-Ruta:
+Ruta: https://analytic-lab.web.app/
