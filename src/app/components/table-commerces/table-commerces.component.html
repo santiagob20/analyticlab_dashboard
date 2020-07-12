@@ -4,7 +4,7 @@
   </div>
   <div class="card-body">
     <table class="table table-striped">
-      <thead>
+      <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
           <th scope="col">Nombre</th>
@@ -18,16 +18,17 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
+        <tr *ngFor="let com of dataTable">
+          <td scope="row">{{com.id}}</td>
+          <td>{{com.name}}</td>
+          <td>{{com.nit}}</td>
+          <td>{{com.address}}</td>
+          <td>{{com.phone}}</td>
+          <td>{{com.owner}}</td>
+          <td>{{com.schedule}}</td>
+          <td>{{com.days}}</td>
+          <td>{{com.sales}}</td>
+
         </tr>
       </tbody>
     </table>

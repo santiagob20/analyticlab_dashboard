@@ -58,7 +58,6 @@ export class ServiceDatadashboardService {
     })
 
     data.features.forEach(marker => {
-      console.log(marker)
       if (marker.properties.name != undefined) {
         var el = document.createElement('div');
         el.className = 'marker';
